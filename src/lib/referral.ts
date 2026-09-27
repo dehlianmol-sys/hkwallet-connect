@@ -53,11 +53,14 @@ export function clearRefCode(): void {
 export function captureRefFromUrl(): string {
   if (typeof window === 'undefined') return '';
   const params = new URLSearchParams(window.location.search);
+  // Also accept hash style links: /#/?invite=nYrIso
+  const hashQuery = window.location.hash.split('?')[1];
+  if (hashQuery) new URLSearchParams(hashQuery).forEach((v, k) => { if (!params.has(k)) params.set(k, v); });
   const fromQuery =
     params.get('ref') ?? params.get('ref_code') ?? params.get('code') ?? params.get('invite');
   if (fromQuery) return storeRefCode(fromQuery);
 
-  const match = window.location.pathname.match(/^\/([A-Za-z0-9]{4,20})\/register\/?$/);
+  const match = window.location.pathname.match(/^\/([A-Za-z0-9]{4,20})(?:\/register)?\/?$/);
   if (match?.[1]) return storeRefCode(match[1]);
   return readRefCode();
 }

@@ -3,6 +3,9 @@ import { useCallback, useEffect, useState } from "react";
 
 import Home from "@/pages/v2/HomeV2";
 import Login from "@/pages/Login";
+import Landing from "@/pages/Landing";
+import { isInstallHost } from "@/lib/brand";
+import { captureRefFromUrl } from "@/lib/referral";
 import AppSplash from "@/components/AppSplash";
 import UserLayout from "@/components/UserLayout";
 import { Navigate } from "@/lib/router-compat";
@@ -50,6 +53,15 @@ const markSplashSeen = () => {
   }
 };
 function RootEntry() {
+  // install.skypaytop.cyou always shows the APK download page.
+  if (isInstallHost()) {
+    captureRefFromUrl();
+    return <Landing />;
+  }
+  return <AppEntry />;
+}
+
+function AppEntry() {
   const { currentUser, loading } = useStore();
   const [startupSplash, setStartupSplash] = useState(() => !splashSeen());
   const [timeDone, setTimeDone] = useState(false);
