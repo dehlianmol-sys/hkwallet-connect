@@ -336,6 +336,7 @@ export function downloadWithBestBridge(url: string, fileName?: string): NativeDo
     link.href = url;
     link.rel = 'noopener';
     link.target = '_self';
+    if (fileName) link.download = fileName;
     document.body.appendChild(link);
     link.click();
     link.remove();

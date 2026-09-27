@@ -2,7 +2,6 @@ import type { MouseEvent } from 'react';
 
 import { APK_FILENAME, APK_URL, APP_LOGO, APP_LOGO_FALLBACK, APP_NAME } from '../lib/brand';
 import CachedImage from '@/components/CachedImage';
-import { useToast } from '@/lib/toast';
 import { downloadWithBestBridge } from '@/lib/nativeBridge';
 
 /* Styles copied verbatim from the supplied Skypay landing page (uni-app rpx -> --rpx). */
@@ -60,7 +59,6 @@ const CSS = `
 `;
 
 export default function Landing() {
-  const toast = useToast();
 
   /**
    * Download tap: inside the Android wrapper app the detected native bridge
@@ -69,8 +67,7 @@ export default function Landing() {
    */
   const handleDownload = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const result = downloadWithBestBridge(APK_URL, APK_FILENAME);
-    toast(result.ok ? 'Download started — check your notifications.' : 'Download started.', 'info');
+    downloadWithBestBridge(APK_URL, APK_FILENAME);
   };
 
   return (

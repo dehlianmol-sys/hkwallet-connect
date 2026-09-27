@@ -23,10 +23,10 @@ export const APP_LOGO = DATABASE_APP_LOGO || APP_LOGO_FALLBACK;
 
 /**
  * The signed main APK ships with the site itself:
- * `public/downloads/hkwallet.apk`. Yahi original placing hai — isse mat badlo.
+ * `public/downloads/app.apk`. Yahi original placing hai — isse mat badlo.
  */
-export const APK_URL = '/downloads/hkwallet.apk';
-export const APK_FILENAME = 'hkwallet.apk';
+export const APK_URL = '/downloads/app.apk';
+export const APK_FILENAME = 'app.apk';
 
 /** Main app (login + dashboard) lives on the app subdomain. */
 export const SITE_ORIGIN = 'https://app.skypaytop.cyou';
