@@ -54,7 +54,7 @@ export default function AdminLayout() {
       >
         <div className="px-5 py-5 border-b border-slate-800 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src={APP_LOGO} onError={(event) => { event.currentTarget.src = APP_LOGO_FALLBACK; }} alt="HK Wallet" className="h-8 w-auto object-contain" />
+            <img src={APP_LOGO} onError={(event) => { event.currentTarget.src = APP_LOGO_FALLBACK; }} alt="Skypay" className="h-8 w-auto object-contain" />
           </div>
           <button className="lg:hidden text-slate-400" onClick={() => setOpen(false)}>
             <X size={20} />
@@ -106,7 +106,7 @@ export default function AdminLayout() {
           <button onClick={() => setOpen(true)}>
             <Menu size={22} />
           </button>
-          <img src={APP_LOGO} onError={(event) => { event.currentTarget.src = APP_LOGO_FALLBACK; }} alt="HK Wallet" className="h-6 w-auto object-contain" />
+          <img src={APP_LOGO} onError={(event) => { event.currentTarget.src = APP_LOGO_FALLBACK; }} alt="Skypay" className="h-6 w-auto object-contain" />
         </header>
         <main className="flex-1 p-4 lg:p-6 overflow-y-auto">
           <Outlet />

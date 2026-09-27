@@ -139,7 +139,7 @@ export default function TeamV2() {
 
     const shareLink = link || (typeof window !== 'undefined' ? window.location.origin : '');
     const share = (target: string) => {
-      const text = encodeURIComponent(`Join HK Wallet: ${shareLink}`);
+      const text = encodeURIComponent(`Join Skypay: ${shareLink}`);
       const urls: Record<string, string> = {
         telegram: `https://t.me/share/url?url=${encodeURIComponent(shareLink)}`,
         whatsapp: `https://wa.me/?text=${text}`,

@@ -1,4 +1,4 @@
-# Hkwallet 
+# Skypay 
 
 Act as an Expert Full-Stack Architect. I have 20 credits and I need to execute a major upgrade safely. 
 

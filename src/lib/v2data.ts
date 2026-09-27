@@ -1,5 +1,5 @@
 /**
- * Data helpers for the new HK Wallet screens (home banners, notice banner and
+ * Data helpers for the new Skypay screens (home banners, notice banner and
  * task reward configuration). Every query tolerates an older database schema:
  * if the new columns/tables are missing the UI simply falls back to defaults.
  */

@@ -36,7 +36,7 @@ function createRealClient(): SupabaseClient {
       ...(supabaseUrl ? [] : ['VITE_SUPABASE_URL']),
       ...(supabaseAnonKey ? [] : ['VITE_SUPABASE_ANON_KEY']),
     ].join(', ');
-    const message = `[HK Wallet] Missing environment variable(s): ${missing}. Add them to your deployment environment and redeploy.`;
+    const message = `[Skypay] Missing environment variable(s): ${missing}. Add them to your deployment environment and redeploy.`;
     console.error(message);
     throw new Error(message);
   }

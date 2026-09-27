@@ -1,6 +1,6 @@
 {
-  "name": "HK Wallet",
-  "short_name": "HK Wallet",
+  "name": "Skypay",
+  "short_name": "Skypay",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

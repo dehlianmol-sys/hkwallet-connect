@@ -151,7 +151,7 @@ export default function Register({ referralCode }: { referralCode?: string } = {
             <FieldIcon type="otp" /><input value={otp} onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))} inputMode="numeric" autoComplete="one-time-code" placeholder="OTP Code" maxLength={6} />
             <button className="hk-send" type="button" onClick={sendOtp} disabled={loading || cooldown > 0}>{cooldown > 0 ? `${cooldown}s` : otpSent ? 'Resend' : 'Send'}</button>
           </div>
-          <AuthInput icon="invite" value={inviteCode} onChange={(value) => setInviteCode(value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 20))} placeholder="Invitation Code" maxLength={20} />
+          <AuthInput icon="invite" value={inviteCode} onChange={(value) => setInviteCode(value.replace(/[^A-Za-z0-9]/g, '').slice(0, 20))} placeholder="Invitation Code" maxLength={20} />
         </div>
         {error && <p className="hk-error">{error}</p>}
         <button className="hk-primary" type="submit" disabled={loading}>{loading ? 'Loading' : 'Sign Up'}</button>

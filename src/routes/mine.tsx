@@ -8,10 +8,10 @@ export const Route = createFileRoute("/mine")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "My Asset — Hkwallet" },
-      { name: "description", content: "View your Hkwallet balance, deposits, commission and account settings." },
-      { property: "og:title", content: "My Asset — Hkwallet" },
-      { property: "og:description", content: "View your Hkwallet balance, deposits, commission and account settings." },
+      { title: "My Asset — Skypay" },
+      { name: "description", content: "View your Skypay balance, deposits, commission and account settings." },
+      { property: "og:title", content: "My Asset — Skypay" },
+      { property: "og:description", content: "View your Skypay balance, deposits, commission and account settings." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

@@ -1,5 +1,5 @@
 /**
- * HK Wallet — single place where the app asks for an SMS OTP.
+ * Skypay — single place where the app asks for an SMS OTP.
  *
  * The request goes to this app's own endpoint (`/api/public/send-otp`), which
  * holds the SMS provider key server side (SMS_API_KEY). No Supabase Edge

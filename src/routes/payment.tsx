@@ -8,10 +8,10 @@ export const Route = createFileRoute("/payment")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Payment Claims — Hkwallet" },
-      { name: "description", content: "Claim INR payment orders on Hkwallet and earn cashback on every completed payment." },
-      { property: "og:title", content: "Payment Claims — Hkwallet" },
-      { property: "og:description", content: "Claim INR payment orders on Hkwallet and earn cashback." },
+      { title: "Payment Claims — Skypay" },
+      { name: "description", content: "Claim INR payment orders on Skypay and earn cashback on every completed payment." },
+      { property: "og:title", content: "Payment Claims — Skypay" },
+      { property: "og:description", content: "Claim INR payment orders on Skypay and earn cashback." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

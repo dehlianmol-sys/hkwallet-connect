@@ -7,8 +7,8 @@ export const Route = createFileRoute("/admin/banners")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Banners — Hkwallet Admin" },
-      { name: "description", content: "Banners in the Hkwallet admin console." },
+      { title: "Banners — Skypay Admin" },
+      { name: "description", content: "Banners in the Skypay admin console." },
       { name: "robots", content: "noindex" },
     ],
   }),

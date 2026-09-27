@@ -1,5 +1,5 @@
 /**
- * HK Wallet — built-in configuration fallback.
+ * Skypay — built-in configuration fallback.
  *
  * Environment variables ALWAYS win. This file only exists so the app keeps
  * working when the `.env` file is missing (for example after downloading the
@@ -22,6 +22,6 @@ export const APP_CONFIG = {
   smsApiUrl:
     'https://bulkblaster-biotp-api-290441563653.asia-south1.run.app/send-otp',
   smsApiKey: 'bb_IwPnQGFEvLpInaB7Mz6cE1rTcYUARdVe',
-  smsBrandName: 'Hkwallet',
+  smsBrandName: 'Skypay',
   smsSenderId: 'DASSAM',
 } as const;

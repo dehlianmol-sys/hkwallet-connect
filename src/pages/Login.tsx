@@ -48,8 +48,8 @@ export default function Login({ showSplash = false }: { showSplash?: boolean }) 
 
   return (
     <main className="hk-auth hk-login-page">
-      <h1 className="sr-only">Sign In to HK Wallet</h1>
-      <div className="hk-brand"><CachedImage src={APP_LOGO} fallbackSrc={APP_LOGO_FALLBACK} cacheKey="app-logo-v2" alt="HK Wallet" /></div>
+      <h1 className="sr-only">Sign In to Skypay</h1>
+      <div className="hk-brand"><CachedImage src={APP_LOGO} fallbackSrc={APP_LOGO_FALLBACK} cacheKey="app-logo-v2" alt="Skypay" /></div>
       <form className="hk-login-form" onSubmit={submit} noValidate>
         <div className="hk-fields">
           <div className="hk-input-shell">

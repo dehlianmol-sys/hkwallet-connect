@@ -6,10 +6,10 @@ export const Route = createFileRoute('/reset-password')({
   ssr: false,
   head: () => ({
     meta: [
-      { title: 'Reset Password — Hkwallet' },
-      { name: 'description', content: 'Reset your Hkwallet account password.' },
-      { property: 'og:title', content: 'Reset Password — Hkwallet' },
-      { property: 'og:description', content: 'Reset your Hkwallet account password.' },
+      { title: 'Reset Password — Skypay' },
+      { name: 'description', content: 'Reset your Skypay account password.' },
+      { property: 'og:title', content: 'Reset Password — Skypay' },
+      { property: 'og:description', content: 'Reset your Skypay account password.' },
       { property: 'og:type', content: 'website' },
       { name: 'twitter:card', content: 'summary_large_image' },
     ],

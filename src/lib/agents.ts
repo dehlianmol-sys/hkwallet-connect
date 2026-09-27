@@ -1,3 +1,4 @@
+import { generateInviteCode } from './referral';
 import { supabase } from './supabase';
 import { SITE_ORIGIN, referralLink } from './brand';
 import { REF_CODE_KEY } from './referral';
@@ -46,7 +47,7 @@ function mapAgent(r: AgentRow): Agent {
 }
 
 export function generateAgentCode(): string {
-  return `AGT${Math.floor(1000 + Math.random() * 9000)}`;
+  return generateInviteCode();
 }
 
 export async function listAgents(): Promise<Agent[]> {
@@ -90,7 +91,7 @@ export async function agentLogin(agentCode: string, phone: string): Promise<Agen
   const { data } = await supabase
     .from('agents')
     .select('*')
-    .eq('agent_id', agentCode.trim().toUpperCase())
+    .in('agent_id', Array.from(new Set([agentCode.trim(), agentCode.trim().toUpperCase()])))
     .eq('phone', phone.trim())
     .maybeSingle();
   return data ? mapAgent(data as AgentRow) : null;

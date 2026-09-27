@@ -6,8 +6,8 @@ export const Route = createFileRoute("/agent/login")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Agent Login — Hkwallet" },
-      { name: "description", content: "Agent Login for Hkwallet partner agents." },
+      { title: "Agent Login — Skypay" },
+      { name: "description", content: "Agent Login for Skypay partner agents." },
       { name: "robots", content: "noindex" },
     ],
   }),

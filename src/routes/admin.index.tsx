@@ -7,8 +7,8 @@ export const Route = createFileRoute("/admin/")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Dashboard — Hkwallet Admin" },
-      { name: "description", content: "Dashboard in the Hkwallet admin console." },
+      { title: "Dashboard — Skypay Admin" },
+      { name: "description", content: "Dashboard in the Skypay admin console." },
       { name: "robots", content: "noindex" },
     ],
   }),

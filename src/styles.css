@@ -150,7 +150,7 @@
   }
 }
 
-/* Supplied HK Wallet loading and authentication screens. */
+/* Supplied Skypay loading and authentication screens. */
 .hk-auth {
   --hk-primary: #1a8653;
   --hk-error: #ef4444;
@@ -213,7 +213,7 @@
 @media (prefers-reduced-motion: reduce) { .hk-mini-spinner, .hk-splash-spinner { animation: none; } }
 
 /* ---------------------------------------------------------------
-   Vivrapay / HK Wallet mobile app shell (vp-*)
+   Vivrapay / Skypay mobile app shell (vp-*)
    Original light theme: white chrome, charcoal cards, green actions,
    amber active tab.
    --------------------------------------------------------------- */

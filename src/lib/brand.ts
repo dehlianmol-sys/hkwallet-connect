@@ -7,10 +7,10 @@
  */
 import { getLogoUrl } from './storage';
 
-export const APP_NAME = 'Hkwallet';
+export const APP_NAME = 'Skypay';
 export const APP_TAGLINE = 'Earn Money Online';
 
-/** Existing HK Wallet mark used only while the database logo is unavailable. */
+/** Existing Skypay mark used only while the database logo is unavailable. */
 export const APP_LOGO_FALLBACK = '/favicon.png';
 
 /**
@@ -28,10 +28,17 @@ export const APP_LOGO = DATABASE_APP_LOGO || APP_LOGO_FALLBACK;
 export const APK_URL = '/downloads/hkwallet.apk';
 export const APK_FILENAME = 'hkwallet.apk';
 
-export const SITE_ORIGIN = 'https://hkwallet.online';
-/** Canonical invite link: browser visitors are sent to the APK download page. */
+/** Main app (login + dashboard) lives on the app subdomain. */
+export const SITE_ORIGIN = 'https://app.skypaytop.cyou';
+/** APK download / invite landing lives on the install subdomain. */
+export const INSTALL_ORIGIN = 'https://install.skypaytop.cyou';
+export const APP_LOGIN_URL = `${SITE_ORIGIN}/login`;
+/** True when the current page is opened on the install subdomain. */
+export const isInstallHost = () =>
+  typeof window !== 'undefined' && window.location.hostname.startsWith('install.');
+/** Canonical invite link, e.g. https://install.skypaytop.cyou/nYrIso */
 export const referralLink = (code: string) =>
-  `${SITE_ORIGIN}/download?ref=${encodeURIComponent(code.trim().toUpperCase())}`;
+  `${INSTALL_ORIGIN}/${encodeURIComponent(code.trim())}`;
 
 /** Referral rebate levels shown across the app. */
 export const REBATE_LEVELS = [

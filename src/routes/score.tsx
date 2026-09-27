@@ -8,10 +8,10 @@ export const Route = createFileRoute("/score")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Score Details — Hkwallet" },
-      { name: "description", content: "See your Hkwallet score balance with every incoming and outgoing entry." },
-      { property: "og:title", content: "Score Details — Hkwallet" },
-      { property: "og:description", content: "See your Hkwallet score balance with every incoming and outgoing entry." },
+      { title: "Score Details — Skypay" },
+      { name: "description", content: "See your Skypay score balance with every incoming and outgoing entry." },
+      { property: "og:title", content: "Score Details — Skypay" },
+      { property: "og:description", content: "See your Skypay score balance with every incoming and outgoing entry." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

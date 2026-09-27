@@ -552,7 +552,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     // Own SHORT invite code for this user (USR82914) + who invited them.
     // Falls back gracefully when the referral columns do not exist yet.
     const ownCode = generateUserCode();
-    const invitedBy = (agentId || '').trim().toUpperCase() || null;
+    const invitedBy = (agentId || '').trim() || null;
     let { data, error } = await supabase
       .from('profiles')
       .insert({ ...base, referral_code: ownCode, referred_by: invitedBy })

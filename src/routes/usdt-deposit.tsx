@@ -7,10 +7,10 @@ export const Route = createFileRoute("/usdt-deposit")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "USDT Deposit — Hkwallet" },
-      { name: "description", content: "Deposit USDT on the Tron network and top up your Hkwallet balance." },
-      { property: "og:title", content: "USDT Deposit — Hkwallet" },
-      { property: "og:description", content: "Deposit USDT on the Tron network and top up your Hkwallet balance." },
+      { title: "USDT Deposit — Skypay" },
+      { name: "description", content: "Deposit USDT on the Tron network and top up your Skypay balance." },
+      { property: "og:title", content: "USDT Deposit — Skypay" },
+      { property: "og:description", content: "Deposit USDT on the Tron network and top up your Skypay balance." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
