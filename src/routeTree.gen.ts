@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as InviteCodeRouteImport } from './routes/$inviteCode'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as CustomerServiceRouteImport } from './routes/customer-service'
 import { Route as DepositRouteImport } from './routes/deposit'
@@ -47,6 +48,11 @@ import { Route as ApiPublicSendOtpRouteImport } from './routes/api/public/send-o
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InviteCodeRoute = InviteCodeRouteImport.update({
+  id: '/$inviteCode',
+  path: '/$inviteCode',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminRoute = AdminRouteImport.update({
@@ -217,6 +223,7 @@ const ApiPublicSendOtpRoute = ApiPublicSendOtpRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$inviteCode': typeof InviteCodeRoute
   '/admin': typeof AdminRouteWithChildren
   '/customer-service': typeof CustomerServiceRoute
   '/deposit': typeof DepositRoute
@@ -253,6 +260,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$inviteCode': typeof InviteCodeRoute
   '/customer-service': typeof CustomerServiceRoute
   '/deposit': typeof DepositRoute
   '/download': typeof DownloadRoute
@@ -289,6 +297,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$inviteCode': typeof InviteCodeRoute
   '/admin': typeof AdminRouteWithChildren
   '/customer-service': typeof CustomerServiceRoute
   '/deposit': typeof DepositRoute
@@ -327,6 +336,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/$inviteCode'
     | '/admin'
     | '/customer-service'
     | '/deposit'
@@ -363,6 +373,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/$inviteCode'
     | '/customer-service'
     | '/deposit'
     | '/download'
@@ -398,6 +409,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/$inviteCode'
     | '/admin'
     | '/customer-service'
     | '/deposit'
@@ -435,6 +447,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  InviteCodeRoute: typeof InviteCodeRoute
   AdminRoute: typeof AdminRouteWithChildren
   CustomerServiceRoute: typeof CustomerServiceRoute
   DepositRoute: typeof DepositRoute
@@ -468,6 +481,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$inviteCode': {
+      id: '/$inviteCode'
+      path: '/$inviteCode'
+      fullPath: '/$inviteCode'
+      preLoaderRoute: typeof InviteCodeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin': {
@@ -732,6 +752,7 @@ const AdminRouteWithChildren = AdminRoute._addFileChildren(AdminRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  InviteCodeRoute: InviteCodeRoute,
   AdminRoute: AdminRouteWithChildren,
   CustomerServiceRoute: CustomerServiceRoute,
   DepositRoute: DepositRoute,

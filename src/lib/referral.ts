@@ -60,7 +60,10 @@ export function captureRefFromUrl(): string {
     params.get('ref') ?? params.get('ref_code') ?? params.get('code') ?? params.get('invite');
   if (fromQuery) return storeRefCode(fromQuery);
 
-  const match = window.location.pathname.match(/^\/([A-Za-z0-9]{4,20})(?:\/register)?\/?$/);
+  const onInstall = window.location.hostname.startsWith('install.');
+  const match = window.location.pathname.match(
+    onInstall ? /^\/([A-Za-z0-9]{4,20})(?:\/register)?\/?$/ : /^\/([A-Za-z0-9]{4,20})\/register\/?$/,
+  );
   if (match?.[1]) return storeRefCode(match[1]);
   return readRefCode();
 }
