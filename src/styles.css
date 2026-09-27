@@ -152,10 +152,10 @@
 
 /* Supplied Skypay loading and authentication screens. */
 .hk-auth {
-  --hk-primary: #1a8653;
+  --hk-primary: #12976a;
   --hk-error: #ef4444;
-  --hk-auth-bg: #f8fafc;
-  --hk-auth-border: #e2e8f0;
+  --hk-auth-bg: #f4f7fd;
+  --hk-auth-border: #cbe6dd;
   position: relative;
   width: 100%;
   max-width: 480px;
@@ -174,13 +174,15 @@
 .hk-fields { display: grid; gap: 13px; }
 .hk-input-shell { display: flex; align-items: center; gap: 14px; min-height: 48px; padding: 0 18px; border: 1px solid var(--hk-auth-border); border-radius: 50px; background: #fff; transition: border-color .15s, box-shadow .15s; }
 .hk-input-shell:focus-within { border-color: var(--hk-primary); box-shadow: 0 0 0 2px rgb(26 134 83 / 10%); }
-.hk-field-icon { width: 24px; height: 24px; flex: 0 0 24px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; color: #94a3b8; }
+.hk-field-icon { width: 24px; height: 24px; flex: 0 0 24px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; color: var(--hk-primary); }
+.hk-login-page .hk-field-icon { color: #303236; }
 .hk-input-shell:focus-within .hk-field-icon { color: var(--hk-primary); }
 .hk-input-shell input { width: 100%; min-width: 0; height: 46px; padding: 0; border: 0; outline: 0; background: transparent; color: #111827; font-size: 17px; font-weight: 400; caret-color: var(--hk-primary); }
-.hk-input-shell input::placeholder { color: #94a3b8; opacity: 1; }
+.hk-input-shell input::placeholder { color: #9baac0; opacity: 1; }
 .hk-prefix { flex: 0 0 auto; padding-right: 10px; border-right: 1px solid #c9ddd4; color: var(--hk-primary); font-size: 16px; font-weight: 700; }
 .hk-otp-shell { padding-right: 12px; gap: 12px; }
 .hk-send { flex: 0 0 auto; min-width: 78px; min-height: 32px; padding: 5px 12px; border: 0; border-radius: 50px; background: var(--hk-primary); color: #fff; font-size: 15px; font-weight: 700; white-space: nowrap; }
+.hk-auth-form .hk-send { background: #7ec8b3; }
 .hk-send:disabled { opacity: .55; cursor: not-allowed; }
 .hk-options { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 5px; color: var(--hk-primary); font-size: 14px; }
 .hk-options a, .hk-forgot a { color: var(--hk-primary); text-decoration: underline; text-underline-offset: 2px; }
