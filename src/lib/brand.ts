@@ -18,7 +18,7 @@ export const APP_LOGO_FALLBACK = '/favicon.png';
  * uploads to, so user side and admin side can never drift apart.
  */
 const databaseLogoUrl = getLogoUrl('Vivrapaylogo.png');
-export const DATABASE_APP_LOGO = databaseLogoUrl ? `${databaseLogoUrl}?v=20260927` : '';
+export const DATABASE_APP_LOGO = databaseLogoUrl || '';
 export const APP_LOGO = DATABASE_APP_LOGO || APP_LOGO_FALLBACK;
 
 /**
