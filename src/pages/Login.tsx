@@ -12,7 +12,7 @@ export default function Login({ showSplash = false }: { showSplash?: boolean }) 
   const toast = useToast();
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
-  const [remember, setRemember] = useState(false);
+  const [remember, setRemember] = useState(true);
   const [agreed, setAgreed] = useState(true);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -70,7 +70,7 @@ export default function Login({ showSplash = false }: { showSplash?: boolean }) 
         <button className="hk-primary" type="submit" disabled={loading}>{loading ? 'Loading' : 'Sign In'}</button>
         <div className="hk-forgot"><Link to="/reset-password">Forget Password</Link></div>
       </form>
-      <span className="hk-version">v1.1.9</span>
+      <span className="hk-version">v1.2.1</span>
       {loading && <div className="hk-loading-overlay"><div className="hk-loading-box"><span className="hk-mini-spinner" /><span>Loading</span></div></div>}
     </main>
   );

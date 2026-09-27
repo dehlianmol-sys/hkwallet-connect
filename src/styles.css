@@ -152,10 +152,10 @@
 
 /* Supplied Skypay loading and authentication screens. */
 .hk-auth {
-  --hk-primary: #1a8653;
+  --hk-primary: #12976a;
   --hk-error: #ef4444;
-  --hk-auth-bg: #f8fafc;
-  --hk-auth-border: #e2e8f0;
+  --hk-auth-bg: #f4f7fd;
+  --hk-auth-border: #cbe6dd;
   position: relative;
   width: 100%;
   max-width: 480px;
@@ -167,35 +167,39 @@
 }
 .hk-login-page { padding: max(24px, 4svh, env(safe-area-inset-top)) 0 70px; }
 .hk-brand { display: grid; place-items: center; }
-.hk-brand img { width: 120px; height: 120px; object-fit: contain; background: #fff; border-radius: 12px; }
+.hk-brand img { width: 184px; height: 184px; object-fit: contain; background: #fff; border-radius: 0; }
 .hk-login-form, .hk-auth-form { width: 71.4%; margin-inline: auto; }
-.hk-login-form { margin-top: clamp(72px, 15svh, 130px); }
-.hk-auth-form { margin-top: 20px; }
-.hk-fields { display: grid; gap: 14px; }
-.hk-input-shell { display: flex; align-items: center; gap: 14px; min-height: 50px; padding: 0 18px; border: 1px solid var(--hk-auth-border); border-radius: 50px; background: #fff; transition: border-color .15s, box-shadow .15s; }
+.hk-login-form { margin-top: 56px; }
+.hk-auth-form { margin-top: 13px; }
+.hk-fields { display: grid; gap: 13px; }
+.hk-input-shell { display: flex; align-items: center; gap: 14px; min-height: 48px; padding: 0 18px; border: 1px solid var(--hk-auth-border); border-radius: 50px; background: #fff; transition: border-color .15s, box-shadow .15s; }
 .hk-input-shell:focus-within { border-color: var(--hk-primary); box-shadow: 0 0 0 2px rgb(26 134 83 / 10%); }
-.hk-field-icon { width: 24px; height: 24px; flex: 0 0 24px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; color: #94a3b8; }
+.hk-field-icon { width: 24px; height: 24px; flex: 0 0 24px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; color: var(--hk-primary); }
+.hk-login-page .hk-field-icon { color: #303236; }
 .hk-input-shell:focus-within .hk-field-icon { color: var(--hk-primary); }
-.hk-input-shell input { width: 100%; min-width: 0; height: 48px; padding: 0; border: 0; outline: 0; background: transparent; color: #111827; font-size: 16px; font-weight: 400; caret-color: var(--hk-primary); }
-.hk-input-shell input::placeholder { color: #94a3b8; opacity: 1; }
+.hk-input-shell input { width: 100%; min-width: 0; height: 46px; padding: 0; border: 0; outline: 0; background: transparent; color: #111827; font-size: 17px; font-weight: 400; caret-color: var(--hk-primary); }
+.hk-input-shell input::placeholder { color: #9baac0; opacity: 1; }
 .hk-prefix { flex: 0 0 auto; padding-right: 10px; border-right: 1px solid #c9ddd4; color: var(--hk-primary); font-size: 16px; font-weight: 700; }
 .hk-otp-shell { padding-right: 12px; gap: 12px; }
 .hk-send { flex: 0 0 auto; min-width: 78px; min-height: 32px; padding: 5px 12px; border: 0; border-radius: 50px; background: var(--hk-primary); color: #fff; font-size: 15px; font-weight: 700; white-space: nowrap; }
+.hk-auth-form .hk-send { background: #7ec8b3; }
 .hk-send:disabled { opacity: .55; cursor: not-allowed; }
 .hk-options { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 5px; color: var(--hk-primary); font-size: 14px; }
 .hk-options a, .hk-forgot a { color: var(--hk-primary); text-decoration: underline; text-underline-offset: 2px; }
-.hk-options label, .hk-agreement { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; }
-.hk-options input, .hk-agreement input { accent-color: var(--hk-primary); }
+.hk-options label, .hk-agreement { display: inline-flex; align-items: center; gap: 6px; min-height: 28px; }
+.hk-options input, .hk-agreement input { width: 16px; height: 16px; margin: 0; appearance: none; border: 1.5px solid #8a8f92; border-radius: 50%; background: #fff; }
+.hk-options input:checked, .hk-agreement input:checked { border-color: #72ca70; background: #72ca70; }
+.hk-options input:checked::after, .hk-agreement input:checked::after { display: block; width: 8px; height: 4px; margin: 3px 0 0 3px; border-bottom: 2px solid #fff; border-left: 2px solid #fff; content: ""; transform: rotate(-45deg); }
 .hk-agreement { width: 100%; justify-content: center; margin-top: 22px; color: var(--hk-primary); font-size: 14px; white-space: nowrap; }
-.hk-primary { display: block; width: 100%; min-height: 50px; margin-top: 20px; padding: 10px 16px; border: 0; border-radius: 50px; background: var(--hk-primary); color: #fff; font-size: 20px; font-weight: 500; letter-spacing: .3px; box-shadow: 0 3px 0 rgb(15 23 42 / 9%); }
+.hk-primary { display: block; width: 100%; min-height: 50px; margin-top: 13px; padding: 10px 16px; border: 0; border-radius: 50px; background: var(--hk-primary); color: #fff; font-size: 20px; font-weight: 700; letter-spacing: 0; box-shadow: 0 3px 0 rgb(15 23 42 / 9%); }
 .hk-primary:active { transform: translateY(1px); box-shadow: 0 1px 0 rgb(15 23 42 / 9%); }
 .hk-primary:disabled { opacity: .6; cursor: wait; }
-.hk-forgot { display: flex; justify-content: center; margin-top: 40px; font-size: 14px; }
+.hk-forgot { display: flex; justify-content: center; margin-top: 48px; font-size: 14px; }
 .hk-version { position: absolute; right: max(13px, env(safe-area-inset-right)); bottom: max(12px, env(safe-area-inset-bottom)); color: #94a3b8; font-size: 12px; letter-spacing: 1px; }
 .hk-error { margin: 12px 6px 0; color: var(--hk-error); font-size: 12px; line-height: 1.5; }
 .hk-status { margin: 16px 4px 0; color: var(--hk-primary); font-size: 12px; text-align: center; }
-.hk-auth-header { display: grid; grid-template-columns: 44px minmax(0,1fr) 44px; align-items: center; min-height: 92px; padding: env(safe-area-inset-top, 0px) 10px 0; background: #fff; color: var(--hk-primary); }
-.hk-auth-header h1 { margin: 0; text-align: center; font-size: 23px; line-height: 1.3; font-weight: 700; }
+.hk-auth-header { display: grid; grid-template-columns: 44px minmax(0,1fr) 44px; align-items: center; min-height: 46px; padding: env(safe-area-inset-top, 0px) 10px 0; background: #fff; color: var(--hk-primary); }
+.hk-auth-header h1 { margin: 0; text-align: center; font-size: 21px; line-height: 1.3; font-weight: 700; }
 .hk-auth-back { display: grid; place-items: center; width: 48px; height: 48px; color: var(--hk-primary); border-radius: 50%; }
 .hk-auth-back svg { width: 27px; height: 27px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .hk-loading-overlay { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; background: rgb(0 0 0 / 12%); }
