@@ -406,7 +406,7 @@ export default function AddToolV2({ onDone, startAtChoose = false }: { onDone?: 
                       >
                         {download === 'done' ? 'Re-download' : 'Download'}
                       </button>
-                      <span> New {tool.name} in Hk Wallet</span>
+                      <span> New {tool.name} in Skypay</span>
                     </div>
                   )}
                   {download !== 'idle' && (
@@ -416,7 +416,7 @@ export default function AddToolV2({ onDone, startAtChoose = false }: { onDone?: 
                           <span className={`download-percentage${download === 'done' ? ' is-complete' : ''}`}>
                             {download === 'done' ? 'Opened in Chrome browser.' : 'Automatic redirect — open Chrome browser'}
                           </span>
-                          <span className="download-product">New {tool.name} in Hk Wallet</span>
+                          <span className="download-product">New {tool.name} in Skypay</span>
                         </div>
                         <div className="progress-box">
                           <div className="status-row">
@@ -447,7 +447,7 @@ export default function AddToolV2({ onDone, startAtChoose = false }: { onDone?: 
                 </li>
                 <li className="step">Login {tool.name} account</li>
                 <li className="step">
-                  Bind {tool.name} in Hk Wallet<br />
+                  Bind {tool.name} in Skypay<br />
                   <button type="button" className="text-link teaching-link" onClick={openTeaching} style={{ border: 0, background: 'transparent', padding: 0 }}>
                     teaching video
                   </button>
