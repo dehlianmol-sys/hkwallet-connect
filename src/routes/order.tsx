@@ -7,10 +7,10 @@ export const Route = createFileRoute("/order")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Order Payment — Hkwallet" },
-      { name: "description", content: "Pay your Hkwallet order with bank transfer and upload the payment voucher." },
-      { property: "og:title", content: "Order Payment — Hkwallet" },
-      { property: "og:description", content: "Pay your Hkwallet order and upload the payment voucher." },
+      { title: "Order Payment — Skypay" },
+      { name: "description", content: "Pay your Skypay order with bank transfer and upload the payment voucher." },
+      { property: "og:title", content: "Order Payment — Skypay" },
+      { property: "og:description", content: "Pay your Skypay order and upload the payment voucher." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

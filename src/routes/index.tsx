@@ -3,6 +3,9 @@ import { useCallback, useEffect, useState } from "react";
 
 import Home from "@/pages/v2/HomeV2";
 import Login from "@/pages/Login";
+import Landing from "@/pages/Landing";
+import { isInstallHost } from "@/lib/brand";
+import { captureRefFromUrl } from "@/lib/referral";
 import AppSplash from "@/components/AppSplash";
 import UserLayout from "@/components/UserLayout";
 import { Navigate } from "@/lib/router-compat";
@@ -12,21 +15,21 @@ export const Route = createFileRoute("/")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Hkwallet — Earn Money Online With Easy Tasks" },
+      { title: "Skypay — Earn Money Online With Easy Tasks" },
       {
         name: "description",
         content:
-          "Download Hkwallet, complete simple tasks, get fast withdrawals and earn referral rebates every day.",
+          "Download Skypay, complete simple tasks, get fast withdrawals and earn referral rebates every day.",
       },
-      { property: "og:title", content: "Hkwallet — Earn Money Online With Easy Tasks" },
+      { property: "og:title", content: "Skypay — Earn Money Online With Easy Tasks" },
       {
         property: "og:description",
-        content: "Download Hkwallet, complete simple tasks and earn referral rebates every day.",
+        content: "Download Skypay, complete simple tasks and earn referral rebates every day.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "https://hkwallet.online/social-preview.jpg" },
+      { property: "og:image", content: "https://install.skypaytop.cyou/social-preview.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: "https://hkwallet.online/social-preview.jpg" },
+      { name: "twitter:image", content: "https://install.skypaytop.cyou/social-preview.jpg" },
     ],
   }),
   component: RootEntry,
@@ -50,6 +53,15 @@ const markSplashSeen = () => {
   }
 };
 function RootEntry() {
+  // install.skypaytop.cyou always shows the APK download page.
+  if (isInstallHost()) {
+    captureRefFromUrl();
+    return <Landing />;
+  }
+  return <AppEntry />;
+}
+
+function AppEntry() {
   const { currentUser, loading } = useStore();
   const [startupSplash, setStartupSplash] = useState(() => !splashSeen());
   const [timeDone, setTimeDone] = useState(false);

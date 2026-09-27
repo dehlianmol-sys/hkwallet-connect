@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { APP_CONFIG } from '@/config/app-config';
 
-// HK Wallet — OTP sender endpoint (server side only).
+// Skypay — OTP sender endpoint (server side only).
 // Environment driven, with a built-in fallback from src/config/app-config.ts so
 // the OTP keeps working even when the .env file is missing:
 //   SMS_API_URL, SMS_API_KEY, SMS_SENDER_ID, SMS_BRAND_NAME

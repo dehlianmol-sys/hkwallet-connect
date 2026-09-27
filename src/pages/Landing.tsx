@@ -5,7 +5,7 @@ import CachedImage from '@/components/CachedImage';
 import { useToast } from '@/lib/toast';
 import { downloadWithBestBridge } from '@/lib/nativeBridge';
 
-/* Styles copied verbatim from the supplied HK Wallet landing page (uni-app rpx -> --rpx). */
+/* Styles copied verbatim from the supplied Skypay landing page (uni-app rpx -> --rpx). */
 const CSS = `
 .lp-root { --rpx: calc(min(100vw, 450px) / 750); background:#1c43ae; display:flex; justify-content:center; min-height:100dvh; }
 .lp { width:100%; max-width:450px; min-height:100dvh; background:#1c43ae; font-family:Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; overflow-x:hidden; }

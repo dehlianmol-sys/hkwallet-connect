@@ -44,7 +44,7 @@ export async function ensureUserReferralCode(userId: string): Promise<string> {
     .eq('id', userId)
     .maybeSingle();
   const existing = (data as { referral_code: string | null } | null)?.referral_code;
-  if (existing) return existing.toUpperCase();
+  if (existing) return existing;
 
   for (let i = 0; i < 5; i++) {
     const code = generateUserCode();
@@ -119,7 +119,7 @@ export async function getUserTeam(userId: string): Promise<UserTeam> {
     .eq('id', userId)
     .maybeSingle();
   const row = data as { referral_code: string | null; commission_rate: number | null } | null;
-  const code = row?.referral_code?.toUpperCase() || (await ensureUserReferralCode(userId));
+  const code = row?.referral_code || (await ensureUserReferralCode(userId));
   const stats = await getTeamStats(
     userId,
     code,

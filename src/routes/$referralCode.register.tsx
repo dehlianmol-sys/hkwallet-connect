@@ -9,7 +9,7 @@ import { REF_CODE_KEY } from "@/lib/agents";
 export const Route = createFileRoute("/$referralCode/register")({
   ssr: false,
   beforeLoad: ({ params }) => {
-    const code = (params.referralCode ?? "").trim().toUpperCase();
+    const code = (params.referralCode ?? "").trim();
     if (code && typeof window !== "undefined") {
       try {
         localStorage.setItem(REF_CODE_KEY, code);
@@ -20,16 +20,16 @@ export const Route = createFileRoute("/$referralCode/register")({
   },
   head: () => ({
     meta: [
-      { title: "Download Hkwallet With Your Invite" },
+      { title: "Download Skypay With Your Invite" },
       {
         name: "description",
         content:
-          "Download the Hkwallet app from your invitation link and register inside the app.",
+          "Download the Skypay app from your invitation link and register inside the app.",
       },
-      { property: "og:title", content: "Download Hkwallet With Your Invite" },
+      { property: "og:title", content: "Download Skypay With Your Invite" },
       {
         property: "og:description",
-        content: "Download Hkwallet and use your invitation code when registering in the app.",
+        content: "Download Skypay and use your invitation code when registering in the app.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

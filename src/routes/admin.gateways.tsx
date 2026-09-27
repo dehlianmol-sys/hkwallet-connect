@@ -7,8 +7,8 @@ export const Route = createFileRoute("/admin/gateways")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Payment Gateways — Hkwallet Admin" },
-      { name: "description", content: "Payment Gateways in the Hkwallet admin console." },
+      { title: "Payment Gateways — Skypay Admin" },
+      { name: "description", content: "Payment Gateways in the Skypay admin console." },
       { name: "robots", content: "noindex" },
     ],
   }),

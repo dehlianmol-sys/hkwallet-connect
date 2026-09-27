@@ -5,7 +5,7 @@ import { preloadCriticalImages } from '@/lib/preload';
 import CachedImage from '@/components/CachedImage';
 const WAVE_IMG_URL = '/ui/loading-wave.png';
 
-/* Copied from the supplied HK Wallet loading screen: splash spinner -> ripple onboarding reveal. */
+/* Copied from the supplied Skypay loading screen: splash spinner -> ripple onboarding reveal. */
 const CSS = `
 .hkl { --white:#ffffff; --ink:#5d6467; --mint:#53aa8e; --blue:#689afa; --yellow:#edce68;
   --unit: min(0.266666667vw, 0.125svh); --ripple-radius: 150vmax; --reveal-duration: 920ms;
@@ -101,19 +101,19 @@ export default function AppSplash({ onFinish }: { onFinish?: () => void }) {
   }, [onFinish]);
 
   return (
-    <main className="hkl" data-phase={phase} aria-label="Loading HK Wallet" aria-busy={phase !== 'ready'}>
+    <main className="hkl" data-phase={phase} aria-label="Loading Skypay" aria-busy={phase !== 'ready'}>
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
-      <section className="splash" hidden={phase === 'ready'} aria-label="Loading HK Wallet">
+      <section className="splash" hidden={phase === 'ready'} aria-label="Loading Skypay">
         <div className="splash-content">
           <div className="splash-orbit">
             <span className="spinner" aria-hidden="true" />
             <CachedImage className="splash-logo" src={APP_LOGO} fallbackSrc={APP_LOGO_FALLBACK} cacheKey="app-logo-v2" alt="" draggable={false} />
           </div>
-          <h1 className="splash-title">HK Wallet</h1>
+          <h1 className="splash-title">Skypay</h1>
         </div>
       </section>
 
-      <section className="onboarding" aria-label="Welcome to HK Wallet">
+      <section className="onboarding" aria-label="Welcome to Skypay">
         <div className="corner-wave" aria-hidden="true">
           <img src={WAVE_IMG_URL} alt="" draggable={false} />
         </div>
@@ -132,7 +132,7 @@ export default function AppSplash({ onFinish }: { onFinish?: () => void }) {
               <div className="card-texture" aria-hidden="true" />
               <div className="card-fold" aria-hidden="true" />
               <div className="logo-tile">
-                <CachedImage src={APP_LOGO} fallbackSrc={APP_LOGO_FALLBACK} cacheKey="app-logo-v2" alt="HK Wallet" draggable={false} />
+                <CachedImage src={APP_LOGO} fallbackSrc={APP_LOGO_FALLBACK} cacheKey="app-logo-v2" alt="Skypay" draggable={false} />
               </div>
             </div>
           </div>

@@ -7,10 +7,10 @@ export const Route = createFileRoute("/pin")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Wallet PIN — Hkwallet" },
-      { name: "description", content: "Create or change the six-digit PIN that protects your Hkwallet account actions." },
-      { property: "og:title", content: "Wallet PIN — Hkwallet" },
-      { property: "og:description", content: "Create or change the six-digit PIN that protects your Hkwallet account actions." },
+      { title: "Wallet PIN — Skypay" },
+      { name: "description", content: "Create or change the six-digit PIN that protects your Skypay account actions." },
+      { property: "og:title", content: "Wallet PIN — Skypay" },
+      { property: "og:description", content: "Create or change the six-digit PIN that protects your Skypay account actions." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

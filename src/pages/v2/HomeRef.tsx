@@ -224,7 +224,7 @@ export default function HomeRef({ transactions }: { transactions?: ReactNode }) 
             <use href="#icon-close" />
           </svg>
         </button>
-        <img className="notice-image" id="notice-image" alt="HK Wallet notice" hidden fetchPriority="high" draggable={false} />
+        <img className="notice-image" id="notice-image" alt="Skypay notice" hidden fetchPriority="high" draggable={false} />
         <p className="notice-error" id="notice-error" role="status" hidden>
           The notice image could not be loaded. Please try again later.
         </p>

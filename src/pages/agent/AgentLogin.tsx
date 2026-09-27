@@ -37,7 +37,7 @@ export default function AgentLogin() {
         <input
           value={code}
           onChange={(e) => setCode(e.target.value)}
-          placeholder="AGT1001"
+          placeholder="Agent code"
           className="w-full rounded-2xl bg-slate-100 px-4 py-3.5 mb-4 outline-none text-base uppercase"
           required
         />

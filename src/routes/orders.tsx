@@ -7,10 +7,10 @@ export const Route = createFileRoute("/orders")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Payment History — Hkwallet" },
-      { name: "description", content: "See every Hkwallet top-up, order and payment in one place." },
-      { property: "og:title", content: "Payment History — Hkwallet" },
-      { property: "og:description", content: "See every Hkwallet top-up, order and payment in one place." },
+      { title: "Payment History — Skypay" },
+      { name: "description", content: "See every Skypay top-up, order and payment in one place." },
+      { property: "og:title", content: "Payment History — Skypay" },
+      { property: "og:description", content: "See every Skypay top-up, order and payment in one place." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
